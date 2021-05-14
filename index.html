@@ -14,12 +14,1206 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+		    <div class="reveal">
+        <div class="slides">
+
+
+            <section data-background="images/likee.png" data-state="backgroundimg" style="background-size: 100%"
+                ,data-menu-title="Custom Menu Title" , data-transition="convex" ,data-transition-speed='slow'>
+
+                <!-- <img src="images/theBump_logo.png" style="box-shadow: none;"/> -->
+                <h2 style="margin-top: 150px"><span style="color: rgb(255,110,110); text-transform:lowercase"></span>
+                    <span style="color: aliceblue;text-transform: capitalize">Web UI </span> <span
+                        style="color: aliceblue">behave automation</span></h2>
+                <div style="text-align: right">
+                    <p style="color: #b7e780">
+                        <small>introduce by: </a> Owen Kang</small>
+                    </p>
+                </div>
+            </section>
+
+            <section data-background="images/slide-background.png" ,data-transition="convex"
+                ,data-transition-speed='slow'>
+                <div style="float: left;">
+                    <h2 style="text-align: left; color: #b4d88b; margin-top: 100px; margin-left: 100px">Agenda</h2>
+                </div>
+
+                <div style="float: right">
+
+
+                    </ul>
+                    <ul style="margin-bottom: 80px; margin-right: 150px">
+                        <li class="fragment fade-up" , style="list-style-type: none; line-height: 80px"><span
+                                style="color: #b4d88b; "><strong>01</strong></span> &nbsp;&nbsp;介绍
+                        </li>
+                        <li class="fragment fade-down" , style="list-style-type: none; line-height: 80px"><span
+                                style="color: #b4d88b"><strong>02</strong></span> &nbsp;&nbsp;配置
+                        </li>
+                        <li class="fragment fade-left" , style="list-style-type: none; line-height: 80px"><span
+                                style="color: #b4d88b"><strong>03</strong></span> &nbsp;&nbsp;How it works?
+                        </li>
+                        <li class="fragment fade-right" , style="list-style-type: none; line-height: 80px"><span
+                                style="color: #b4d88b"><strong>04</strong></span> &nbsp;&nbsp;关键架构
+                        </li>
+                        <li class="fragment fade-right" , style="list-style-type: none; line-height: 80px"><span
+                                style="color: #b4d88b"><strong>05</strong></span> &nbsp;&nbsp;Q & A
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Fixtures are setup tasks that need to happen so you can test your code</li>
+                        <li>In our case it's mostly inserting data</li>
+                    </ul>
+            </section>
+
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+
+                <section>
+                    <p style="font-size: 55px"><span style="color: #b4d88b"><strong>01</strong></span>
+                        &nbsp;&nbsp;<strong>介绍</strong>
+                    </P>
+                    <ul>
+                        <li style="line-height: 100px">问题陈述</li>
+                        <li style="line-height: 30px">解决方案</li>
+                    </ul>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>1&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>问题陈述</strong></p>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <div>
+                        <p style="font-size: 40px"><span
+                                style="color: #b4d88b"><strong>1&nbsp;.&nbsp;1&nbsp;.&nbsp;1</strong></span>
+                            &nbsp;&nbsp;<strong>手工工作流痛点</strong></p>
+                        <ul>
+                            <li style="list-style-type: none;line-height: 50px" class="fragment">1. 重复的
+                                操作</li>
+                            <li style="list-style-type: none;line-height: 50px" class="fragment">2. 测试场景
+                                是复杂多样的
+                            </li>
+                            <li style="list-style-type: none;line-height: 50px" class="fragment">3. 创建测试数据
+                                手动操作会花费很多时间</li>
+
+
+                        </ul>
+                    </div>
+
+
+                </section>
+
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <!-- <h3><span style="color: #b4d88b"><str>1.2</span> &nbsp;&nbsp;solution statement</h3> -->
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>1&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>解决方案</strong></p>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>1&nbsp;.&nbsp;2&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>简要介绍</strong></p>
+                    <p style="text-align: left; font-size: smaller"><span>&nbsp;&nbsp;behave-automation
+                        </span> <span
+                            style="color: #cf1818"></span>
+                        使用以自然语言风格编写的测试，并由Python代码进行备份。
+                        用户故事是由Gherkin语言组织的，这是一种自然语言风格的标签
+                        在功能。
+                    </p>
+
+
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>1&nbsp;.&nbsp;2&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>Testing stack</strong></p>
+                    <div>
+                        <img src="images/behave20191008180948.png"
+                            style="float: left; box-shadow: none; margin: 2%; width: 100%; height: 150%; " />
+                    </div>
+
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>1&nbsp;.&nbsp;2&nbsp;.&nbsp;3</strong></span>
+                        &nbsp;&nbsp;<strong>Technology Stack</strong></p>
+                    <img src="images/python_logo.png" style="float: left; box-shadow: none; margin: 2%; width: 28%" />
+                    <img src="images/selenium_logo.png" style="float: left; box-shadow: none; margin: 2%; width: 28%" />
+                    <img src="images/behave_logo1.png" style="float: left; box-shadow: none; margin: 2%; width: 25%" />
+                    <!-- <img src="images/images.jpg" style="float: ringht; box-shadow: none; margin: 2%; width: 28%" /> -->
+
+                    <aside class="notes">
+                        <ul>
+                            <li>The parts relevant to this talk</li>
+                            <li>We also use other datastores such as Cassandra and ElasticSearch</li>
+                            <li>Going to use MySQL as an example throughout this talk</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px; margin-bottom: 50px"><span
+                            style="color: #b4d88b"><strong>1&nbsp;.&nbsp;2&nbsp;.&nbsp;4</strong></span>
+                        &nbsp;&nbsp;<strong>框架背景</strong></p>
+                    <ul class="fragment" style="margin-bottom: 200px">
+                        <li class="fragment">What is <span class="fragment highlight-red">Behavior-driven
+                                development</span>?</li>
+                        <li class="fragment">What is <span class="fragment highlight-red">gherkin</span>?</li>
+                        <li class="fragment">What is <span class="fragment highlight-red">behave</span>?</li>
+                    </ul>
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <div style="font-size: smaller">
+                        <h3>About Behavior-driven development</h3>
+                        <p style="text-align: left; font-size: smaller"><span
+                                style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+                        <p class="fragment" , style="text-align: left; font-size: smaller"><span
+                                style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;BDD</span>,
+                            行为驱动开发(或
+
+BDD),
+
+是一种敏捷的软件开发技术，鼓励开发人员之间的协作，
+
+软件项目中的QA和非技术或业务参与者
+
+
+
+BDD,
+
+重点在于通过讨论获得对所需软件行为的清晰理解
+
+与利益相关者。
+
+它通过用一种非程序员可以阅读的自然语言编写测试用例来扩展TDD。
+
+行为驱动的开发人员使用他们的本地语言与无处不在的
+
+域驱动的语言
+
+设计要描述代码的目的和好处。这允许开发人员
+
+专注于为什么要创建代码，
+
+而不是技术细节，并尽量减少技术语言之间的翻译
+
+在其中编写代码和
+
+由业务、用户、涉众、项目管理等使用的领域语言。
+                        </p>
+
+                    </div>
+                </section>
+
+
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <h3>About Gherkin – BDD Language</h3>
+                    <p style="text-align: left; font-size: 28px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: crimson">Gherkin</span> 是一种语言, 用于编写特性、场景和步骤. Gherkin 目的是帮助我们写出具体的要求。</br></p>
+                    <p class="fragment" style="text-align: left; font-size: 28px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了理解我们所说的具体要求,
+                        考虑以下 <span style="color: crimson">Keywords</span> −</p>
+
+                    <ul class="fragment">
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Feature</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Rule</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Example (or Scenario)</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Given, When, Then, And, But
+                            (steps)</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Background</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Scenario Outline (or Scenario
+                            Template)</li>
+                        <li class="fragment" style="line-height: 50px; font-size: smaller">Examples</li>
+                    </ul>
+
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <div style="font-size: smaller">
+                        <h3>About behave</h3>
+                        <p style="text-align: left; font-size: smaller"><span
+                                style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;behave</span>
+                            使用以自然语言风格编写的测试, 并由Python代码进行备份.</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;为了理解我们所说的具体需求,
+                            考虑下面的例子 :</p>
+
+                        <p class="fragment" , style="text-align: left; font-size: smaller">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: crimson">Now</span> make a directory called
+                            “features/”.
+                            In that directory create a file called “example.feature” containing:</p>
+
+                        <img class="fragment" src="images/feature20191009170423.png"
+                            style="float: center; box-shadow: none; margin: 2%; width: 50%" />
+
+                    </div>
+                </section>
+
+            </section>
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+                <section id="fragments" , data-transition="convex" ,data-transition-speed='slow'>
+                    <!-- <h2 style="color: rgba(24, 24, 24, 0.9)">Configuration</h2> -->
+                    <p style="font-size: 55px"><span style="color: #b4d88b; "><strong>02</strong></span>
+                        &nbsp;&nbsp;<strong>配置</strong></p>
+                    <ul>
+                        <li class="fragment" , style="line-height: 100px">配置准备</li>
+                        <li class="fragment" , style="line-height: 30px;">启动运行</li>
+
+                    </ul>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <!-- <h3><span style="color: #b4d88b"><str>1.2</span> &nbsp;&nbsp;solution statement</h3> -->
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>2&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>配置准备</strong>
+                    </p>
+                    <ul style="font-size: 30px">
+                        <li class="fragment grow" , style="line-height: 60px">Python3</li>
+                        <li class="fragment grow" , style="line-height: 60px">behave</li>
+                        <li class="fragment grow" , style="line-height: 60px">selenium</li>
+                    </ul>
+
+                </section>
+
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <!-- <h3><span style="color: #b4d88b"><str>1.2</span> &nbsp;&nbsp;solution statement</h3> -->
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>启动运行</strong></p>
+
+                    <ul>
+                        <li class="fragment">为项目设置虚拟环境</li>
+                        <li class="fragment">安装依赖包</li>
+
+                        <li class="fragment">运行命令: behave&nbsp; -i&nbsp; xxx.feature</li>
+                    </ul>
+
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2&nbsp;.&nbsp;1&nbsp;</strong></span>
+                        &nbsp;&nbsp;<strong>为项目设置虚拟环境</strong></p>
+                    <p style="font-size: 30px"><strong>通过IDE - Pycharm为项目设置虚拟环境</strong></p>
+                    <ul style="font-size: 30px">
+                        <li>确保您已经在计算机上下载并安装了Python3。</li>
+                        <li>通过按'Ctrl+Alt+S'打开设置，并在project Interpreter中选择项目名称。
+                            点击
+                            齿轮图标，并选择添加。
+                        </li>
+                        <li>在“添加Python解释器”对话框的左侧窗格中，选择Virtualenv Environment。
+                            的
+                            以下操作取决于之前是否存在虚拟环境。
+                        </li>
+                        <li>单击OK完成任务。</li>
+
+                    </ul>
+
+                </section>
+
+
+                <section>
+                    <p style="font-size: 30px"><strong>通过virtual (Windows)设置虚拟环境</strong></p>
+                    <ul style="font-size: 30px">
+                        <li>打开项目文件路径，命令行: <span style="color: #cf1818">cd
+                                project_folder</span></li>
+                        <li>创建虚拟环境，命令行: <span style="color: #cf1818">virtualenv env -p
+                                Pythonx.x</span></li>
+                        <li>使用虚拟环境，命令行: <span
+                                style="color: #cf1818">env\Scripts\activate.bat</span></li>
+                        <li>你可以去激活它，命令行: <span style="color: #cf1818">deactivate</span></li>
+
+                    </ul>
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2&nbsp;.&nbsp;2&nbsp;</strong></span>
+                        &nbsp;&nbsp;<strong>安装依赖包</strong></p>
+                    <ul>
+                        <!-- <li>Install 'Browsermob Proxy', command: <span style="color: dodgerblue">pip install browsermob-proxy</span></li> -->
+                        <li style="margin-top: 50px">Install requirements, command: <span style="color: dodgerblue">pip
+                                install -r requirements.txt</span></li>
+
+                    </ul>
+
+                </section>
+
+
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2&nbsp;.&nbsp;3&nbsp;</strong></span>
+                        &nbsp;&nbsp;<strong>install a '.pth' file</strong></p>
+                    <ul style="font-size: 30px">
+                        <li>os.environ["username"] = "xxx"</li>
+                        <li>os.environ["password"] = "xxx"</li>
+                    </ul>
+                    <pre style="font-size: 15px"><code class="python" data-trim data-line-numbers="1,8,11,18">
+    [_set_envs.pth]
+    import os;
+    os.environ["password"] = "xxx";
+    os.environ["username"] = "xxx";
+    os.environ["gp_password"] = "xxx";
+    os.environ["gp_username"] = "xxx"
+                                                        </code></pre>
+
+
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2&nbsp;.&nbsp;4&nbsp;</strong></span>
+                        &nbsp;&nbsp;<strong>Run 'xxx.feature'</strong></p>
+
+
+                    <p style="text-align: left; margin-left: 40px; font-size: 30px">Type on the command line: behave -i
+                        xxx.feature</p>
+                    <div style="height: 500px">
+                        <img style="float: center;; box-shadow: none; margin: 2%; width: 75%"
+                            src="images/run-behave.png" />
+                    </div>
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>2&nbsp;.&nbsp;2&nbsp;.&nbsp;5&nbsp;</strong></span>
+                        &nbsp;&nbsp;<strong>About behave arguments</strong></p>
+
+
+                    <pre><code class="python" data-trim data-line-numbers="1,5,8,9,22-24" style="overflow: scroll; width: 900px; height: 500px; font-size: 16px">
+                            usage: behave [options] [ [DIR|FILE|FILE:LINE] ]+
+
+                            Run a number of feature tests with behave.
+
+                            positional arguments:
+                              paths                 Feature directory, file or file location (FILE:LINE).
+
+                            optional arguments:
+                              -h, --help            show this help message and exit
+                              -c, --no-color        Disable the use of ANSI color escapes.
+                              --color               Use ANSI color escapes. This is the default behaviour.
+                                                    This switch is used to override a configuration file
+                                                    setting.
+                              -d, --dry-run         Invokes formatters without executing the steps.
+                              -D NAME=VALUE, --define NAME=VALUE
+                                                    Define user-specific data for the config.userdata
+                                                    dictionary. Example: -D foo=bar to store it in
+                                                    config.userdata["foo"].
+                              -e PATTERN, --exclude PATTERN
+                                                    Don't run feature files matching regular expression
+                                                    PATTERN.
+                              -i PATTERN, --include PATTERN
+                                                    Only run feature files matching regular expression
+                                                    PATTERN.
+                              --no-junit            Don't output JUnit-compatible reports.
+                              --junit               Output JUnit-compatible reports. When junit is
+                                                    enabled, all stdout and stderr will be redirected and
+                                                    dumped to the junit report, regardless of the "--
+                                                    capture" and "--no-capture" options.
+                              --junit-directory PATH
+                                                    Directory in which to store JUnit reports.
+                              -f FORMAT, --format FORMAT
+                                                    Specify a formatter. If none is specified the default
+                                                    formatter is used. Pass "--format help" to get a list
+                                                    of available formatters.
+                              --steps-catalog       Show a catalog of all available step definitions. SAME
+                                                    AS: --format=steps.catalog --dry-run --no-summary -q
+                              -k, --no-skipped      Don't print skipped steps (due to tags).
+                              --show-skipped        Print skipped steps. This is the default behaviour.
+                                                    This switch is used to override a configuration file
+                                                    setting.
+                              --no-snippets         Don't print snippets for unimplemented steps.
+                              --snippets            Print snippets for unimplemented steps. This is the
+                                                    default behaviour. This switch is used to override a
+                                                    configuration file setting.
+                              -m, --no-multiline    Don't print multiline strings and tables under steps.
+                              --multiline           Print multiline strings and tables under steps. This
+                                                    is the default behaviour. This switch is used to
+                                                    override a configuration file setting.
+                              -n NAME, --name NAME  Only execute the feature elements which match part of
+                                                    the given name. If this option is given more than
+                                                    once, it will match against all the given names.
+                              --no-capture          Don't capture stdout (any stdout output will be
+                                                    printed immediately.)
+                              --capture             Capture stdout (any stdout output will be printed if
+                                                    there is a failure.) This is the default behaviour.
+                                                    This switch is used to override a configuration file
+                                                    setting.
+                              --no-capture-stderr   Don't capture stderr (any stderr output will be
+                                                    printed immediately.)
+                              --capture-stderr      Capture stderr (any stderr output will be printed if
+                                                    there is a failure.) This is the default behaviour.
+                                                    This switch is used to override a configuration file
+                                                    setting.
+                              --no-logcapture       Don't capture logging. Logging configuration will be
+                                                    left intact.
+                              --logcapture          Capture logging. All logging during a step will be
+                                                    captured and displayed in the event of a failure. This
+                                                    is the default behaviour. This switch is used to
+                                                    override a configuration file setting.
+                              --logging-level LOGGING_LEVEL
+                                                    Specify a level to capture logging at. The default is
+                                                    INFO - capturing everything.
+                              --logging-format LOGGING_FORMAT
+                                                    Specify custom format to print statements. Uses the
+                                                    same format as used by standard logging handlers. The
+                                                    default is "%(levelname)s:%(name)s:%(message)s".
+                              --logging-datefmt LOGGING_DATEFMT
+                                                    Specify custom date/time format to print statements.
+                                                    Uses the same format as used by standard logging
+                                                    handlers.
+                              --logging-filter LOGGING_FILTER
+                                                    Specify which statements to filter in/out. By default,
+                                                    everything is captured. If the output is too verbose,
+                                                    use this option to filter out needless output.
+                                                    Example: --logging-filter=foo will capture statements
+                                                    issued ONLY to foo or foo.what.ever.sub but not foobar
+                                                    or other logger. Specify multiple loggers with comma:
+                                                    filter=foo,bar,baz. If any logger name is prefixed
+                                                    with a minus, eg filter=-foo, it will be excluded
+                                                    rather than included.
+                              --logging-clear-handlers
+                                                    Clear all other logging handlers.
+                              --no-summary          Don't display the summary at the end of the run.
+                              --summary             Display the summary at the end of the run.
+                              -o FILE, --outfile FILE
+                                                    Write to specified file instead of stdout.
+                              -q, --quiet           Alias for --no-snippets --no-source.
+                              -s, --no-source       Don't print the file and line of the step definition
+                                                    with the steps.
+                              --show-source         Print the file and line of the step definition with
+                                                    the steps. This is the default behaviour. This switch
+                                                    is used to override a configuration file setting.
+                              --stage STAGE         Defines the current test stage. The test stage name is
+                                                    used as name prefix for the environment file and the
+                                                    steps directory (instead of default path names).
+                              --stop                Stop running tests at the first failure.
+                              -t TAG_EXPRESSION, --tags TAG_EXPRESSION
+                                                    Only execute features or scenarios with tags matching
+                                                    TAG_EXPRESSION. Pass "--tags-help" for more
+                                                    information.
+                              -T, --no-timings      Don't print the time taken for each step.
+                              --show-timings        Print the time taken, in seconds, of each step after
+                                                    the step has completed. This is the default behaviour.
+                                                    This switch is used to override a configuration file
+                                                    setting.
+                              -v, --verbose         Show the files and features loaded.
+                              -w, --wip             Only run scenarios tagged with "wip". Additionally:
+                                                    use the "plain" formatter, do not capture stdout or
+                                                    logging output and stop at the first failure.
+                              -x, --expand          Expand scenario outline tables in output.
+                              --lang LANG           Use keywords for a language other than English.
+                              --lang-list           List the languages available for --lang.
+                              --lang-help LANG      List the translations accepted for one language.
+                              --tags-help           Show help for tag expressions.
+                              --version             Show version.
+
+                                    </code></pre>
+
+                </section>
+
+
+            </section>
+
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 55px"><span style="color: #b4d88b; "><strong>03</strong></span>
+                        &nbsp;&nbsp;<strong>How it works?</strong></p>
+
+
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>Features</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: smaller"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Features </span>,
+                        是由场景组成的。它们可以有一个描述，一个背景和一组
+                        标签。控件中的代码块
+                        相同的文件或来自不同的文件</p>
+                    <div class="fragment">
+                        <img style="float: center; box-shadow: none; margin: 2%; width: 50%; height: 70%"
+                            src="images/20191010121429.png" />
+                    </div>
+                </section>
+
+
+
+                <section>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>场景和场景概述</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: smaller"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Scenario </span> 被引入执行
+                        的步骤
+                        以事务性的方式执行，只执行一次。</p>
+                    <p class="fragment" , style="text-align: left; font-size: smaller"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Scenario Outline </span>,
+                        提供了从基于Gherkin的特性文件执行循环的灵活性。</p>
+                    <div class="fragment">
+                        <img style="float: center; box-shadow: none; margin: 2%; width: 100%; height: 90%"
+                            src="images/20191010124521.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;3</strong></span>
+                        &nbsp;&nbsp;<strong>Keywords</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: smaller">
+                        它通常包含以下关键词:</p>
+
+                    <ul class="fragment" style="font-size: 30px;">
+                        <li class="fragment">Background</li>
+                        <li class="fragment">Scenario Outline</li>
+                        <li class="fragment">Given (some context)</li>
+                        <li class="fragment">When (some action is carried out)</li>
+                        <li class="fragment">Then (a particular set of observable
+                            consequences should obtain)</li>
+                        <li class="fragment">And/But (执行相同的操作
+                            和前面的步骤一样)</li>
+                    </ul>
+                </section>
+
+                <section data-transition="convex" ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;4</strong></span>
+                        &nbsp;&nbsp;<strong>Steps</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: 25px"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Steps </span>,
+                        场景中使用的步骤是在“steps”目录中的Python文件中实现的。
+                        你可以随意命名它们，只要它们使用python *.py文件扩展名。
+                        你不需要告诉行为使用哪些-它会使用所有的。</p>
+                    <pre class="fragment"><code class="python" data-trim data-line-numbers="6-15" style="overflow: scroll; width: 900px; height: 400px; font-size: 16px">
+                Feature: Test Client Billing case assignment work flow (PTid: #167422955)
+
+                    Background: Create Client Billing cases on Account and check work flow
+
+                    Scenario Outline: Client Billing cases Test
+                        Given login salesforce
+                            And "&lt;seq&gt;" - Create a Lead
+                            And Exist lead generate vendor id
+                            And Exist lead with vendor id convert to Account
+                        When Create a contract with "&lt;tkww_product_family&gt;" on inbound case "&lt;related_account&gt;" Account
+                            And create "&lt;related_account&gt;" Inbound case on new account
+                            And close first case with "&lt;exist_case_status&gt;"
+                            And close second case with "&lt;exist_case_status&gt;"
+                            And create "&lt;related_account&gt;" Inbound case in tab
+                        Then Verify the Inbound case with "&lt;case_owner&gt;"
+
+
+                        Examples:
+                        | seq | related_account | tkww_product_family | case_owner       | exist_case_status |
+                        | 1   | no              | Listings            | Account Strategy | no                |
+                        | 2   | yes             | Listings            |                  | no                |
+                        | 3   | have case       | Listings            | exist case owner | open              |
+                        | 4   | have case       | Listings            | exist case owner | close             |
+
+
+                        </code></pre>
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;5</strong></span>
+                        &nbsp;&nbsp;<strong>Page object</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: smaller"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Page Object </span>
+                        Model是一种为web UI元素创建对象存储库的设计模式。在这种模式下
+                        应用程序中的每个网页，
+                        应该有相应的页类。这个Page类将找到该web的WebElements
+                        page，也包含page方法
+                        在这些WebElements上执行操作。</p>
+
+
+
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;5&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>Page object Code sample</strong></p>
+                    <pre><code class="Python" data-trim data-line-numbers="1,2,7,8,8,10,11,19,21,22"
+                   style="overflow: scroll; width: 900px; height: 500px; font-size: 16px">
+                   from selenium.webdriver.common.by import By
+                   from .abstract_base_page import Page, Focus
+                   from selenium.webdriver.support.ui import WebDriverWait
+                   from selenium.webdriver.support import expected_conditions as EC
+
+
+                   class LoginPageLocators(object):
+                       username_field = (By.ID, "username")
+                       # username_field = "username"
+                       password_field = (By.ID, "password")
+                       login_btn = (By.ID, "Login")
+                       # login_btn = "Login"
+                       login_as_ae = (By.NAME, "login")
+                       user_menu_btn = (By.ID, "userNavButton")
+                       logout_btn = (By.XPATH, "//*[@id='userNav-menuItems']/a[4]")
+                       current_user = (By.XPATH, "//*[@id='phHeader']/tbody/tr/td[3]/div/div[1]/div/span[1]")
+
+
+                   class LoginPage(Page):
+
+                       @property
+                       def __login_username_field(self):
+                           """ Return "Username" web element in Login page """
+                           return self.driver.find_element(*LoginPageLocators.username_field)
+
+                       def fill_login_email(self, username):
+                           """Sends keys to "Username" element.
+
+                               :Args:
+                                - username: The keys to send.
+                           """
+                           self.set_text(username, self.__login_username_field)
+
+                       @property
+                       def __login_password_field(self):
+                           """ Return "Password" web element in Login page """
+                           return self.driver.find_element(*LoginPageLocators.password_field)
+
+                       def fill_login_password(self, password):
+                           """Sends keys to "Password" element.
+
+                               :Args:
+                                - password: The keys to send.
+                               """
+                           self.set_text(password, self.__login_password_field)
+
+                       @property
+                       def __login_button(self):
+                           """ Return "Log In to Sandbox" web element in Login page """
+                           return self.driver.find_element(*LoginPageLocators.login_btn)
+
+                       def click_login_btn(self):
+                           """Click "Log In to Sandbox"."""
+                           self.click_element(self.__login_button)
+
+                       @Focus.screenshot
+                       def login(self, username, password):
+                           self.fill_login_email(username)
+                           self.fill_login_password(password)
+                           self.click_login_btn()
+                           self.wait(2)
+
+                       def login_as_user(self, user):
+                           user_url = self.get_user_url(user)
+                           self.open(user_url)
+                           self.wait(2)
+                           self.click_element(*LoginPageLocators.login_as_ae)
+                           self.wait(2)
+
+                                                </code></pre>
+
+
+
+                </section>
+
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;6</strong></span>
+                        &nbsp;&nbsp;<strong>Steps Definitions</strong></p>
+                    <pre><code class="Python" data-trim data-line-numbers="2,3,5,6,10,11,28,29,36,37,51,52,56,62,66"
+                           style="overflow: scroll; width: 900px; height: 500px; font-size: 16px">
+# -*- coding: utf-8 -*-
+import os
+from behave import *
+
+@given('login salesforce')
+def set_up(context):
+    context.login_obj.open("https://test.salesforce.com")
+    context.login_obj.login(os.environ["username"], os.environ["password"])
+
+@given(u'"{seq}" - Create a Lead')
+def create_lead(context, seq):
+    context.tab_obj.click_leads_tab()
+    context.edit_lead_obj.click_new_lead_btn()
+    context.edit_lead_obj.click_continue_btn()
+    context.edit_lead_obj.fill_company_name_field(seq + "+" + context.test_data["Lead"]["company_name"] + "+" + "12061")
+    context.edit_lead_obj.fill_phone_num_field(context.test_data["Lead"]["business_phone"])
+    context.edit_lead_obj.fill_first_name_field(context.test_data["Lead"]["contact_first_name"])
+    context.edit_lead_obj.fill_last_name_field(context.test_data["Lead"]["contact_last_name"])
+    context.edit_lead_obj.fill_email_field(context.test_data["Lead"]["company_for_email"])
+    context.edit_lead_obj.select_lead_create_source(context.test_data["Lead"]["lead_source"])
+    context.edit_lead_obj.select_lead_category(context.test_data["Lead"]["lead_category"])
+    context.edit_lead_obj.fill_street_field(context.test_data["Lead"]["biz_street"])
+    context.edit_lead_obj.fill_city_field(context.test_data["Lead"]["biz_city"])
+    context.edit_lead_obj.fill_state_field(context.test_data["Lead"]["biz_state"])
+    context.edit_lead_obj.fill_zip_field(context.test_data["Lead"]["biz_zip"])
+    context.edit_lead_obj.click_save_lead_btn()
+
+@given(u'Exist lead generate vendor id')
+def lead_generate_vendor_id(context):
+    context.lead_obj.click_generate_vendor_id_btn()
+    context.lead_obj.refresh()
+    lead_vendor_id = context.lead_obj.get_lead_vendor_id()
+    print("*** WW Vendor Id = " + lead_vendor_id)
+
+
+@given(u'Exist lead with vendor id convert to Account')
+def lead_convert_account(context):
+    context.convert_lead_obj.click_convert_button()
+    context.convert_lead_obj.wait_for_convert_status_load()
+    context.convert_lead_obj.click_dont_create_opp_checkbox()
+    context.convert_lead_obj.fill_task_subject_field(context.test_data["Lead"]["title"])
+    context.convert_lead_obj.click_convert_due_date_txt()
+    context.convert_lead_obj.select_action_type("Admin Notes")
+    context.convert_lead_obj.click_continue_conversion_button()
+    acc_page = context.convert_lead_obj.get_current_link()
+    print("*** Account Link = " + acc_page)
+
+
+
+
+@then(u'Verify the "{seq}" Onboarding Case assigned to "{assignment_2}"')
+def onboarding_case_owner_verification(context, seq, assignment_2):
+    if seq == "1" or seq == "3":
+    first_case_record_type = context.account_obj.get_first_case_record_type()
+    expect_onboarding_case_record_type = "Onboarding"
+    assert first_case_record_type == expect_onboarding_case_record_type
+    first_case_owner = context.account_obj.get_first_case_owner()
+    expect_onboarding_case_owner = assignment_2
+    print(first_case_record_type)
+    print(first_case_owner)
+    print(assignment_2)
+    assert first_case_owner == expect_onboarding_case_owner
+    elif seq == "2" or seq == "4":
+    actual_account_case_record_display = context.account_obj.get_case_record_display()
+    expect_account_case_record_display = "No records to display"
+    assert actual_account_case_record_display == expect_account_case_record_display
+
+                        </code></pre>
+
+
+
+                </section>
+
+
+                <section>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7</strong></span>
+                        &nbsp;&nbsp;<strong>environment.py</strong></p>
+                    <ul>
+                        <li style="line-height: 100px; font-size: smaller">Context</li>
+                        <li style="line-height: 30px; font-size: smaller">环境控制</li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>Context</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: 28px"><span
+                            style="color: crimson">&nbsp;&nbsp;&nbsp;&nbsp;Context </span>,
+                        您可能已经注意到了传递的“context”变量。那是个聪明的地方，你
+                        和行为可以存储信息
+                        分享。它在三个级别上运行，根据行为自动管理。</p>
+                    <p class="fragment" , style="text-align: left; font-size: 28px">&nbsp;&nbsp;&nbsp;&nbsp;当 behave
+                        启动到一个新特性或场景，它向上下文添加了一个新层，
+                        允许新的活动级别添加新的值，或覆盖以前定义的值
+                        活动的持续时间。这些可以被认为是
+                        范围。</p>
+
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>环境控制</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: 28px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;environment.py 模块可以定义在前后运行的代码
+                        测试过程中的某些事件:</p>
+
+                    <ul class="fragment">
+                        <li class="fragment" style="line-height: 30px; font-size: 25px"><span
+                                style="color: crimson;"><strong>before_step(context, step), after_step(context,
+                                    step)</strong></span> </br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Notes: These
+                                run before and after every step.</span></br></li>
+                        <li class="fragment" style="line-height: 30px; font-size: 25px"><span
+                                style="color: crimson;"><strong>before_scenario(context, scenario),
+                                    after_scenario(context, scenario)</strong></span></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Notes: These
+                                run before and after each scenario is run.</span></br></li>
+                        <li class="fragment" style="line-height: 30px; font-size: 25px"><span
+                                style="color: crimson;"><strong>before_feature(context, feature), after_feature(context,
+                                    feature)</strong></span></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Notes: These
+                                run before and after each feature file is exercised.</span></br></li>
+                        <li class="fragment" style="line-height: 30px; font-size: 25px"><span
+                                style="color: crimson;"><strong>before_tag(context, tag), after_tag(context,
+                                    tag)</strong></span></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Notes: These
+                                run before and after a section tagged with the given name.
+                                They are invoked for each tag encountered in the order they’re found in the feature
+                                file. See controlling things with tags.</span></li>
+                        <li class="fragment" style="line-height: 30px; font-size: 25px"><span
+                                style="color: crimson;"><strong>before_all(context),
+                                    after_all(context)</strong></span></br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Notes: These
+                                run before and after the whole shooting match.</span></li>
+                    </ul>
+
+
+
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;2&nbsp;.&nbsp;1</strong></span>
+                        &nbsp;&nbsp;<strong>使用fixture初始化浏览器</strong></p>
+
+                    <p class="fragment" , style="text-align: left; font-size: 25px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;我们需要为每个场景或特性分配一个@fixture标记
+                        应该可以访问一个网页。
+                        这不是一个好的选择。此外，如果我们想要切换到另一个浏览器呢?我们需要
+                        检查一下所有的功能
+                        修改@fixture。浏览器每次? !这个问题可以通过安装夹具来解决
+                        Before_feature (context)函数来自environment.py。
+                        是这样的:</p>
+
+                    <pre class="fragment"><code class="Python" data-trim data-line-numbers="6,14,17"
+                    style="overflow: scroll; width: 900px; height: 300px; font-size: 16px">
+
+def before_all(context):
+use_fixture(selenium_browser_chrome, context)
+# -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
+
+
+def before_feature(context, feature):
+if 'Test Asset collection case assignment work flow' \
+        or 'Test Onboarding case assignment work flow' \
+        or 'Test Client Billing case assignment work flow' \
+        or 'Test VIP work flow' \
+        or 'Test Sales Process work flow' \
+        in str(feature):
+    print('====Before Feature====' + str(feature))
+    use_fixture(init_page_obj, context)
+
+
+def after_feature(context, feature):
+if 'Test Asset collection case assignment work flow (PTid: #167422940)' \
+        or 'Test Onboarding case assignment work flow' \
+        or 'Test Client Billing case assignment work flow' \
+        or 'Test VIP work flow' \
+        or 'Test Sales Process work flow' \
+        in str(feature):
+    print('====After Feature====' + str(feature))
+                                                 </code></pre>
+                </section>
+
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;2&nbsp;.&nbsp;2</strong></span>
+                        &nbsp;&nbsp;<strong>使用 Fixture</strong></p>
+
+                    <p class="fragment" , style="text-align: left; font-size: 25px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;fixture可以通过调用use_fixture()函数来使用。use_fixture()调用
+                        执行setup - fixture部分并返回安装结果。此外，它确保了CLEANUP-FIXTURE
+                        Part稍后在删除当前上下文层时调用。因此，任何手动清理处理
+                        在after_tag()中钩子是不必要的。</p>
+
+                    <pre class="fragment"><code class="Python" data-trim data-line-numbers="1,2,14"
+                    style="overflow: scroll; width: 900px; height: 300px; font-size: 16px">
+
+def before_all(context):
+use_fixture(selenium_browser_chrome, context)
+# -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
+
+
+def before_feature(context, feature):
+if 'Test Asset collection case assignment work flow' \
+        or 'Test Onboarding case assignment work flow' \
+        or 'Test Client Billing case assignment work flow' \
+        or 'Test VIP work flow' \
+        or 'Test Sales Process work flow' \
+        in str(feature):
+    print('====Before Feature====' + str(feature))
+    use_fixture(init_page_obj, context)
+
+                                                 </code></pre>
+                </section>
+
+                <section>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;2&nbsp;.&nbsp;3</strong></span>
+                        &nbsp;&nbsp;<strong>用标签控制东西</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: 25px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;你也可以 “<span style="color: crimson;">tag</span>” 你的部分特性文件。在最简单的层面上
+                        允许行为有选择地检查您的特性集的部分。</p>
+
+                    <pre class="fragment"><code class="python" data-trim data-line-numbers="1" style="overflow: scroll; width: 900px; height: 300px; font-size: 16px">
+@ac_case
+Feature: Test Asset collection case assignment work flow (PTid: #167422940)
+
+  Background: Create Asset collection cases on Account and check assignment work flow
+
+  Scenario Outline: Asset collection case assignment work flow Test
+     Given login salesforce
+     When "&lt;seq&gt;" Create a "&lt;manual_vip&gt;" status and "&lt;account_as&gt;" Account
+     And Create a "&lt;onboarding_case&gt;"
+     And Create a exist "&lt;ac_case&gt;" - "&lt;ac_case_pf&gt;" Ac Case
+     And Create a "&lt;product_family&gt;" - "&lt;contract_date&gt;" Ac Case
+     Then Verify the "&lt;seq&gt;" Ac Case assigned to "&lt;assignment_2&gt;"
+
+
+                                    </code></pre>
+
+
+
+                </section>
+
+
+                <section>
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;2&nbsp;.&nbsp;4</strong></span>
+                        &nbsp;&nbsp;<strong>使用标签</strong></p>
+                    <p class="fragment" , style="text-align: left; font-size: 25px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;然后运行 '<span style="color: crimson;">behave
+                            --tags=ac_case</span>' 将只运行标记为 @ac_case.
+                        如果你想运行除了@ac_case的那些，那么你可以运行 '<span
+                            style="color: crimson;">behave --tags="not @ac_case</span>"'.</p>
+                    <div class="fragment">
+                        <img style="float: center; box-shadow: none; margin: 2%; width: 65%; height: 65%"
+                            src="images/20191010165412.png" />
+                    </div>
+
+
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 40px"><span
+                            style="color: #b4d88b"><strong>3&nbsp;.&nbsp;7&nbsp;.&nbsp;3</strong></span>
+                        &nbsp;&nbsp;<strong>environment.py Code sample</strong></p>
+                    <pre><code class="Python" data-trim data-line-numbers="1,2,15,20,31,41,52"
+                           style="overflow: scroll; width: 900px; height: 500px; font-size: 16px">
+                @fixture
+                def init_page_obj(context):
+                    context.login_obj = PageFactory.get_page_object("login", context.browser)
+                    context.tab_obj = PageFactory.get_page_object("tab", context.browser)
+                    context.edit_lead_obj = PageFactory.get_page_object("edit lead", context.browser)
+                    context.lead_obj = PageFactory.get_page_object("lead", context.browser)
+                    context.edit_account_obj = PageFactory.get_page_object("edit account", context.browser)
+                    context.account_obj = PageFactory.get_page_object("account", context.browser)
+                    context.contact_obj = PageFactory.get_page_object("contact", context.browser)
+                    context.edit_contract_obj = PageFactory.get_page_object("edit contract", context.browser)
+                    context.edit_case_obj = PageFactory.get_page_object("edit case", context.browser)
+                    context.convert_lead_obj = PageFactory.get_page_object("convert lead", context.browser)
+
+
+                def before_all(context):
+                    use_fixture(selenium_browser_chrome, context)
+                    # -- HINT: CLEANUP-FIXTURE is performed after after_all() hook is called.
+
+
+                def before_feature(context, feature):
+                    if 'Test Asset collection case assignment work flow' \
+                            or 'Test Onboarding case assignment work flow' \
+                            or 'Test Client Billing case assignment work flow' \
+                            or 'Test VIP work flow' \
+                            or 'Test Sales Process work flow' \
+                            in str(feature):
+                        print('====Before Feature====' + str(feature))
+                        use_fixture(init_page_obj, context)
+
+
+                def after_feature(context, feature):
+                    if 'Test Asset collection case assignment work flow (PTid: #167422940)' \
+                            or 'Test Onboarding case assignment work flow' \
+                            or 'Test Client Billing case assignment work flow' \
+                            or 'Test VIP work flow' \
+                            or 'Test Sales Process work flow' \
+                            in str(feature):
+                        print('====After Feature====' + str(feature))
+
+
+                def before_scenario(context, scenario):
+                    if 'Asset collection case assignment work flow Test' \
+                            or 'Onboarding cases assignment Test' \
+                            or 'Client Billing cases Test' \
+                            or 'VIP Test' \
+                            or 'Sales Process Test' \
+                            in str(scenario):
+                        print('====Before scenario====' + str(scenario))
+                        use_fixture(test_data, context)
+
+
+                def after_scenario(context, scenario):
+                    if 'Asset collection case assignment work flow Test' \
+                            or 'Onboarding cases assignment Test' \
+                            or 'Client Billing cases Test' \
+                            or 'VIP Test' \
+                            or 'Sales Process Test' \
+                            in str(scenario):
+                        print('====after scenario====' + str(scenario))
+
+                                                        </code></pre>
+
+
+                </section>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+                    <p style="font-size: 40px"><span style="color: #b4d88b"><strong>3&nbsp;.&nbsp;8</strong></span>
+                        &nbsp;&nbsp;<strong>Put test_data in @fixture</strong></p>
+                    <pre><code class="Python" data-trim data-line-numbers="5,23-26"
+                    style="overflow: scroll; width: 900px; height: 500px; font-size: 16px">
+                    #!/usr/bin/python3
+                    # -*- coding: utf-8 -*-
+                    from behave import fixture, use_fixture
+
+                    from data_objects.test_data_builder import get_test_data
+                    from page_objects.PageFactory import PageFactory
+                    from page_objects.DriverFactory import DriverFactory
+
+
+                    @fixture
+                    def selenium_browser_chrome(context):
+                        # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
+                        DriverFactory.browser = 'chrome'
+                        # in gz network, using proxy selenium instance
+                        context.browser = DriverFactory().get_proxy_driver("172.26.0.17:3128")
+                        # if in US network, using this instance
+                        # context.browser = DriverFactory.get_web_driver()
+                        yield context.browser
+                        # -- CLEANUP-FIXTURE PART:
+                        # context.browser.quit()
+
+
+                    @fixture
+                    def test_data(context):
+                        """Register the driver with Page"""
+                        context.test_data = get_test_data()
+
+
+                    @fixture
+                    def init_page_obj(context):
+                        context.login_obj = PageFactory.get_page_object("login", context.browser)
+                        context.tab_obj = PageFactory.get_page_object("tab", context.browser)
+                        context.edit_lead_obj = PageFactory.get_page_object("edit lead", context.browser)
+                        context.lead_obj = PageFactory.get_page_object("lead", context.browser)
+                        context.edit_account_obj = PageFactory.get_page_object("edit account", context.browser)
+                        context.account_obj = PageFactory.get_page_object("account", context.browser)
+                        context.contact_obj = PageFactory.get_page_object("contact", context.browser)
+                        context.edit_contract_obj = PageFactory.get_page_object("edit contract", context.browser)
+                        context.edit_case_obj = PageFactory.get_page_object("edit case", context.browser)
+                        context.convert_lead_obj = PageFactory.get_page_object("convert lead", context.browser)
+                                                 </code></pre>
+                </section>
+
+
+            </section>
+
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+
+                <section data-background="images/slide-background.png" , data-transition="convex"
+                    ,data-transition-speed='slow'>
+
+                    <p style="font-size: 55px"><span style="color: #b4d88b; "><strong>04</strong></span>
+                        &nbsp;&nbsp;<strong>Key
+                            Takeaways</strong></p>
+
+                    <ul>
+                        <li style="line-height: 50px; font-size: 30px">使用“页面对象模型”创建对象
+                            存储库的web UI元素。
+                            我们可以根据相应的页面进行调用。的映射关系
+                            定义的步骤。</li>
+                        <li style="line-height: 50px; font-size: 30px">将test_data放入@fixture中，这样我们就可以使用test
+                            没有定义的全局数据</li>
+                    </ul>
+
+                </section>
+
+
+
+
+            </section>
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+
+                <p style="font-size: 55px; margin-bottom: 200px"><span
+                        style="color: #b4d88b; "><strong>05</strong></span>
+                    &nbsp;&nbsp;<strong>Q & A</strong></p>
+
+
+            </section>
+
+
+            <section data-background="images/slide-background.png" , data-transition="convex"
+                ,data-transition-speed='slow'>
+                <h1>The End</h1>
+                <h2 style="color: rgb(23,151,192)">Thank you!</h2>
+            </section>
+
+
+        </div>
+    </div>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
